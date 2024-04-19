@@ -249,7 +249,7 @@ double CarbonDioxide::Psat()
 {
     double log, sum=0,P;
     if ((T < Tmn) || (T > Tc)) {
-        throw CanteraError("CarbonDixoide::Psat",
+        throw CanteraError("CarbonDioxide::Psat",
                            "Temperature out of range. T = {}", T);
     }
     for (int i=1; i<=8; i++) {
@@ -265,7 +265,7 @@ double CarbonDioxide::ldens()
 {
     double xx=1-(T/Tc), sum=0;
     if ((T < Tmn) || (T > Tc)) {
-        throw CanteraError("CarbonDixoide::ldens",
+        throw CanteraError("CarbonDioxide::ldens",
                            "Temperature out of range. T = {}", T);
     }
     for (int i=1; i<=6; i++) {
