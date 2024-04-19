@@ -7,6 +7,7 @@
 #include "cantera/base/stringUtils.h"
 #include "cantera/base/global.h"
 
+#include "Ammonia.h"
 #include "CarbonDioxide.h"
 #include "Heptane.h"
 #include "HFC134a.h"
@@ -37,6 +38,8 @@ Substance* newSubstance(const std::string& name)
         return new CarbonDioxide;
     } else if (lcname == "heptane") {
         return new Heptane;
+    } else if (lcname == "ammonia") {
+        return new Ammonia;
     } else {
         throw Cantera::CanteraError("tpx::newSubstance", "No Substance"
             " definition known for '{}'.", name);

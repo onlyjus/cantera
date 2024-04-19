@@ -26,6 +26,7 @@ Pure Fluid Phases
 The following convenience functions can be used to create `PureFluid` objects
 with the indicated equation of state:
 
+.. autofunction:: Ammonia
 .. autofunction:: CarbonDioxide
 .. autofunction:: Heptane
 .. autofunction:: Hfc134a

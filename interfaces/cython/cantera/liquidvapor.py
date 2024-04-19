@@ -151,6 +151,25 @@ def Hfc134a():
     return PureFluid('liquidvapor.yaml', 'HFC-134a')
 
 
+def Ammonia():
+    """
+    Create a `PureFluid` object using the equation of state for ammonia.
+
+    The object returned by this method implements an accurate equation of
+    state for ammonia that can be used in the liquid, vapor, saturated
+    liquid/vapor, and supercritical regions of the phase diagram. The
+    equation of state is taken from
+
+        W. C. Reynolds, *Thermodynamic Properties in SI: graphs, tables, and
+        computational equations for forty substances.* Stanford: Stanford
+        University, 1979. Print.
+
+    For more details, see classes :ct:`PureFluidPhase` and :ct:`tpx::Ammonia` in
+    the Cantera C++ source code documentation.
+    """
+    return PureFluid('liquidvapor.yaml', 'ammonia')
+
+
 def CarbonDioxide():
     """
     Create a `PureFluid` object using the equation of state for carbon dioxide.

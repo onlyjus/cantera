@@ -99,6 +99,14 @@ phases:
     1,1,1,2-Tetrafluoroethane (HFC-134a) for Temperatures From 170 K to 455 K
     and Pressures up to 70 MPa". J. Phys. Chem. Ref. Data, Vol. 23, No. 5, 1994.
     pp. 657--729.
+- name: ammonia
+  thermo: pure-fluid
+  elements: [H, N]
+  species: [NH3]
+  state:
+    T: 300.0
+    P: 1.01325e+05
+  pure-fluid-name: ammonia
 
 # Note that these species definitions are used ONLY to set the
 # reference state values for the entropy and enthalpy at 298.15 K,
@@ -183,3 +191,14 @@ species:
     T0: 273.15
     h0: 2.30834148686e+07
     s0: 1.67025466e+05
+- name: NH3
+  composition: {N: 1, H: 3}
+  thermo:
+    model: NASA7
+    temperature-ranges: [200.0, 1000.0, 6000.0]
+    data:
+    - [4.30177808, -4.7712733e-03, 2.19341619e-05, -2.29856489e-08, 8.28992268e-12,
+      -6748.06394, -0.690644393]
+    - [2.71709692, 5.56856338e-03, -1.76886396e-06, 2.6741726e-10, -1.52731419e-14,
+      -6584.51989, 6.09289837]
+    note: TPIS89

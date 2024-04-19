@@ -5,12 +5,13 @@ from textwrap import dedent
 from .. import Solution as _Solution, PureFluid as _PureFluid, CanteraError
 from .. import (Heptane as _Heptane, Water as _Water, Hfc134a as _Hfc134a,
                 CarbonDioxide as _CarbonDioxide, Hydrogen as _Hydrogen,
-                Methane as _Methane, Nitrogen as _Nitrogen, Oxygen as _Oxygen)
+                Methane as _Methane, Nitrogen as _Nitrogen, Oxygen as _Oxygen
+                Ammonia as _Ammonia)
 from pint import get_application_registry
 
 __all__ = ("units", "Q_", "Solution", "PureFluid", "Heptane", "CarbonDioxide",
            "Hfc134a", "Hydrogen", "Methane", "Nitrogen", "Oxygen", "Water",
-           "CanteraError")
+           "Ammonia", "CanteraError")
 
 units = get_application_registry()
 Q_ = units.Quantity
@@ -145,6 +146,13 @@ def Heptane():
     return PureFluid("liquidvapor.yaml", "heptane")
 
 Heptane.__doc__ = _Heptane.__doc__
+
+
+def Ammonia():
+    return PureFluid("liquidvapor.yaml", "ammonia")
+
+
+Ammonia.__doc__ = _Ammonia.__doc__
 
 
 def CarbonDioxide():
